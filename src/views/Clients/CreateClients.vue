@@ -13,7 +13,7 @@
 							<input type="text" class="form-control" name="nomGrade" v-model="societesForm.nomSociete"  required>
 						</div>	
 						<div class="form-group">
-							<label>Secteur</label>
+							<label>Lieu</label>
 							<input type="text" class="form-control" name="nomGrade" v-model="societesForm.secteurSociete"  required>
 						</div>
 					</div>

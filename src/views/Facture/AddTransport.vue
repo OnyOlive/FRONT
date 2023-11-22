@@ -9,7 +9,7 @@
                     </div>
                     <div class="modal-body">					
                         <div class="form-group">
-                            <label>Transport</label>
+                            <label>Frais de transport</label>
                             <input type="text" class="form-control" name="nomZone" v-model="factureForm.addTransport" required>
                         </div>				
                     </div>

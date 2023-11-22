@@ -20,12 +20,12 @@
                   <li>N° d'identification à la statistique: 51235 11 1982 0 00006</li>
                   <li>N° d'identification fiscale: 3 000 064 086</li>
                 </ul>
-                <hr>_
+                <hr>
               </div>
               <div class="col-md-3 float-end">
                 <ul class="list-unstyled">
-                    <li class="fs-4 fw-bold">FACTURE <br><span class="fs-5">N° {{ facturesByNum.numeroFacture }}</span></li>
-                    <li class="fs-6 fw-bold"> {{ data.variete }}</li>
+                    <li class="fs-4 fw-bold">FACTURE <br><span class="fs-5">N° {{ facturesByNum.numeroFacture }} /23</span></li>
+                    <li class="fs-6 fw-bold"> {{ data.variete }} </li>
                     <li>Doit</li>
                     <div class="bordered-content">
                         <li class="fs-6 fw-bold">{{ data.societeClients }}</li>
@@ -40,8 +40,8 @@
                 Les marchandises, matières consommables, matériels ou prestation de service ci-après désignés à la commande
                 sont livrés en bonnes conditions, suivant le bon de livraison ou la liste de colisage.
               </p>
-              <p>LC N° {{ data.numeroLC }} <br>
-              AE N° {{ data.numeroAE }} du {{ formateDate(data.dateAE) }}</p>
+              <p>LC N° {{ data.numeroLC }}<br>
+              AE N° {{ data.numeroAE }}  du {{ formateDate(data.dateAE) }} </p>
             </div>
   
             <div class="row mx-10">
@@ -81,6 +81,7 @@
                     <td></td>
                     <td>{{ facturesByNum.sommeMontant }}</td>
                   </tr>
+            
                   <tr>
                     <th colspan="6" class="text-end">CRACT 5%</th>
                     <td>{{ facturesByNum.montantCRACT }}</td>
@@ -107,7 +108,7 @@
             
             <div class="row text-end">
                 <p class="fs-5 fw-bold" style="color: red;">
-                  Total: {{ facturesByNum.totalFacture }}
+                  Total: {{ facturesByNum.totalFacture }} 
                 </p>
             </div>
             <hr class="mt-0">
@@ -128,7 +129,7 @@
               </div>
               <div class="col-md-6 text-end">
                 <p class="fw-bold">
-                  Date: <span class="text-muted">{{ formateDate(facturesByNum.dateFacture)  }}</span>
+                  Antananarivo, le <span class="text-muted"><!-- {{ formateDate(facturesByNum.dateFacture)  }} --> 12-10-2023</span>
                 </p>
               </div>
             </div>
@@ -169,6 +170,9 @@
 
     const props = defineProps ({
       numeroFacture: {
+        required: true
+      },
+      trnasport: {
         required: true
       }
     })

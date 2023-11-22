@@ -39,19 +39,19 @@
                     <div class="row px-5 mt-3">
                         <div class="col-md-6">
                             <ul class="list-unstyled">
-                                <li ><span class="fw-bold">N° Laissez-passer: </span>{{ colisageByID.numeroLaissezPasser}}</li>
-                                <li ><span class="fw-bold">Variété: </span>{{ colisageByID.varietes?.nomVariete}}</li>
-                                <li ><span class="fw-bold">Secteur:</span> {{ colisageByID.secteur  }}</li>
-                                <li ><span class="fw-bold">Magasin:</span> {{ colisageByID.magasins?.nomMagasin }}</li>
-                                <li ><span class="fw-bold">Emballage:</span> {{ colisageByID.emballage }}</li>
+                                <li ><span class="fw-bold">N° Laissez-passer: </span>{{ colisageByID.numeroLaissezPasser}} </li>
+                                <li ><span class="fw-bold">Variété: </span>{{ colisageByID.varietes?.nomVariete}} </li>
+                                <li ><span class="fw-bold">Secteur:</span> {{ colisageByID.secteur  }} </li>
+                                <li ><span class="fw-bold">Magasin:</span> {{ colisageByID.magasins?.nomMagasin }} </li>
+                                <li ><span class="fw-bold">Emballage:</span> {{ colisageByID.emballage }} </li>
                             </ul>
                         </div>
                         <div class="col-md-6">
                             <ul class="list-unstyled">
-                                <li ><span class="fw-bold">Chauffeur: </span>{{ colisageByID.nomChauffeur}}</li>
-                                <li ><span class="fw-bold">N° Camion: </span>{{ colisageByID.numeroCamion }}</li>
-                                <li ><span class="fw-bold">Lieu de départ:</span> {{ colisageByID.lieuDepart }}</li>
-                                <li ><span class="fw-bold">Destination:</span> {{ colisageByID.destination }}</li>
+                                <li ><span class="fw-bold">Chauffeur: </span>{{ colisageByID.nomChauffeur}} </li>
+                                <li ><span class="fw-bold">N° Camion: </span>{{ colisageByID.numeroCamion }} </li>
+                                <li ><span class="fw-bold">Lieu de départ:</span> {{ colisageByID.lieuDepart }} </li>
+                                <li ><span class="fw-bold">Destination:</span> {{ colisageByID.destination }} </li>
                             </ul>
                         </div>
                     </div>
@@ -71,7 +71,7 @@
                                 <td>{{ ct.recolte }}</td>
                                 <td>{{ ct.grades.nomGrade }}</td>
                                 <td>{{ ct.poidsBrute }}</td>
-                            </tr>				 
+                            </tr>			 
                         </tbody>
                     </table>
                     <hr>
@@ -81,7 +81,7 @@
                 </div>
             </div>
             <!-- <div class="card-footer bg-black"></div> -->
-            </div>
+        </div>
     </div>
 </template>
 

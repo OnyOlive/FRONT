@@ -6,6 +6,7 @@ export default function ColisageFonction() {
     const colisageTable = ref([])
     const recap = ref([])
     const colisageByID = ref({})
+    const annees = ref([])
 
     const ajouterHeader = async (colisageHeader) => {
        await monaxios.post("/colisage/createHeader",{...colisageHeader})
@@ -15,18 +16,18 @@ export default function ColisageFonction() {
         })
     }
 
-    const ajouterTable = async (colisageTableForm) => {
-        await monaxios.post("/colisage/createTable",{...colisageTableForm})
-        .catch(error => {
-            throw error.response.data.message;
-        })
-    }
-
     const afficherLC = async () => {
         await monaxios.get("/colisage/readLC")
         .then(response => {
             colisages.value = response.data
         })
+        .catch(error => {
+            throw error.response.data.message;
+        })
+    }
+
+    const ajouterTable = async (colisageTableForm) => {
+        await monaxios.post("/colisage/createTable",{...colisageTableForm})
         .catch(error => {
             throw error.response.data.message;
         })
@@ -92,8 +93,29 @@ export default function ColisageFonction() {
         })
     }
 
+    const rechercherColisageParAnnee = async (annee) => {
+        await monaxios.get(`/colisage/readColisageByYear/${annee}`)
+        .then(response => {
+            colisages.value = response.data
+        })
+        .catch(error => {
+            throw error.response.data.message;
+        })
+    }
+
+    const afficherAnnee = async () => {
+        await monaxios.get('/colisage/allYears')
+        .then(response => {
+            annees.value = response.data
+        })
+        .catch(error => {
+            throw error.response.data.message;
+        })
+    }
+
     return {
         recap,
+        annees,
         colisages,
         colisageTable,
         colisageByID,
@@ -101,11 +123,13 @@ export default function ColisageFonction() {
         afficherLC,
         ajouterTable,
         ajouterHeader,
+        afficherAnnee,
         rechercherParNumeroLC,
         afficherColisageTable,
         rechercherColisageParNumLC,
         rechercherColisageParNumLP,
-        rechercherColisageParDate
+        rechercherColisageParDate,
+        rechercherColisageParAnnee
     }
 
 }

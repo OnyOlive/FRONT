@@ -69,7 +69,7 @@
 			emit("afficher")
 			gradesForm.nomGrade = null
 			gradesForm.prixUnitaire = null
-			gradesForm.varietes.nomVariete = null
+			// gradesForm.varietes.nomVariete = null
 		} catch (error) {
 			Swal.fire({
 				title: 'Erreur',

@@ -11,10 +11,10 @@
 						<div class="modal-body">
 							<div class="row">
 								<div class="col-md-6">
-									<!-- <div class="form-group">
+									<div class="form-group">
 										<label>LC N°</label>
 										<input type="text" class="form-control" name="" v-model="colisageHeader.numeroLC" required>
-									</div>					 -->
+									</div>					
 									<div class="form-group">
 										<label>Laissez-passer N°</label>
 										<input type="text" class="form-control" name="" v-model="colisageHeader.numeroLaissezPasser" required>
@@ -54,10 +54,10 @@
 									</div>
 									<div class="form-group">
 										<label>Année d'emballage</label>
-										<select v-model="selectedYear" id="annee" class="form-select rounded" style="width: 40%;">
+										<!-- <select v-model="selectedYear" id="annee" class="form-select rounded" style="width: 40%;">
 											<option v-for="year in years" :key="year" :value="year">{{ year }}</option>
-										</select>
-										<!-- <input type="text" class="form-control" name="" v-model="colisageHeader.emballage" required> -->
+										</select> -->
+										<input type="text" class="form-control" name="" v-model="colisageHeader.emballage" required>
 									</div>
 								</div>
 							</div>
@@ -82,10 +82,10 @@
 							</div>	
 							<div class="form-group">
 								<label>Année de récolte</label>
-								<select v-model="selectedRecolteYear" id="annee" class="form-select rounded" style="width: 40%;">
+								<!-- <select v-model="selectedRecolteYear" id="annee" class="form-select rounded" style="width: 40%;">
 									<option v-for="year in years" :key="year" :value="year">{{ year }}</option>
-								</select>
-								<!-- <input type="text" class="form-control" name="" v-model="colisageTable.recolte" required> -->
+								</select> -->
+								<input type="text" class="form-control" name="" v-model="colisageTable.recolte" required>
 							</div>
 							<div class="form-group">
 								<label>Grade</label>
@@ -119,7 +119,7 @@
 	import GradesFonction from '../../Service/GradesService.js';
 
 	const colisageHeader = reactive({
-		// numeroLC: null,
+		numeroLC: null,
 		numeroLaissezPasser: null,
 		numeroCamion: null,
 		nomChauffeur: null,
@@ -164,7 +164,7 @@
 	const emit = defineEmits(["afficher"])
 	const remplirTable = async() => {
 		try {
-			colisageTable.recolte = selectedRecolteYear;
+			// colisageTable.recolte = selectedRecolteYear;
 			await ajouterTable(colisageTable)
 			emit("afficher");
 			Swal.fire({
@@ -189,7 +189,7 @@
 
 	const enregistrerHeader =  async () => {
 		try{
-			colisageHeader.emballage = selectedYear;
+			// colisageHeader.emballage = selectedYear;
 			await ajouterHeader(colisageHeader)
 			colisageTable.colisage.numeroLC = colisageHeader.numeroLC
 			colisageTable.colisage.varietes.nomVariete = colisageHeader.varietes.nomVariete

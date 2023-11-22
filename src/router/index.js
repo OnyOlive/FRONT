@@ -5,10 +5,20 @@ const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
+      path: '/login',
+      name: 'login',
+      component: () => import('../components/LoginPage.vue')
+    },
+    {
       path: '/',
+      name: 'show home',
+      component: () => import('../components/HomePage.vue')
+    },
+    {
+      path: '/app',
       name: 'home',
       component: HomeView,
-      children: [
+      children: [    
         // LISTE DE COLISAGE
         {
           path: 'listeColisage',
@@ -17,15 +27,17 @@ const router = createRouter({
         },
         {
           path: 'listeColisage/showLC/:numeroLC',
+          // path: 'listeColisage/showLC',
           name: 'show LC',
           props: true,
           component: () => import('../views/ListeColisage/ShowLC.vue')
         },
         {
           path: 'listeColisage/showRecap/:numeroLC',
+          // path: 'listeColisage/showRecap',
           name: 'show recap',
-          component: () => import('../views/ListeColisage/ShowRecap.vue'),
           props: true,
+          component: () => import('../views/ListeColisage/ShowRecap.vue'),
         },
         //AUTORISATIONS
         {
@@ -34,9 +46,10 @@ const router = createRouter({
           component: () => import('../views/Autorisation/ViewAE.vue')
         },
         {
-          path: 'autorisation/showAE/:numeroAE',
+          // path: 'autorisation/showAE/:numeroAE',
+          path: 'autorisation/showAE',
           name: 'show autorisation',
-          props: true,
+          // props: true,
           component: () => import('../views/Autorisation/AE.vue')
         },
         //FACTURES
@@ -48,6 +61,7 @@ const router = createRouter({
         {
           // path: 'facture/showFacture/:numeroAE',
           path: 'facture/showFacture/:numeroFacture',
+          // path: 'facture/showFacture',
           name: 'show facture',
           props: true,
           component: () => import('../views/Facture/ShowFacture.vue')
@@ -79,40 +93,31 @@ const router = createRouter({
           name: 'all zones',
           component: () => import('../views/Zones/ViewZone.vue')
         },
+
         // SECTEURS
         {
           path: 'secteurs',
           name: 'all secteurs',
           component: () => import('../views/Secteurs/ViewSecteurs.vue')
         },
+
         // MAGASINS
         {
           path: 'magasins',
           name: 'all magasins',
           component: () => import('../views/Magasins/ViewMagasins.vue')
         },
-        // TABACS
-        {
-          path: 'tabacs',
-          name: 'all tabacs',
-          component: () => import('../views/Tabacs/ViewTabacs.vue')
-        },
-        {
-          path: 'tabacs/stock',
-          name: 'stock tabacs',
-          component: () => import('../views/Tabacs/ViewStock.vue')
-        }
 
+        // BILANS
+        {
+          path: 'bilans',
+          name: 'show bilan',
+          component: () => import('../views/Bilans/BilansAnnuel.vue')
+        }
 
       ]
     },
-    // {
-    //   // path: 'facture/showFacture/{:numeroAE}',
-    //   path: '/facture/showFacture',
-    //   name: 'show facture',
-    //   // props: true,
-    //   component: () => import('../views/Facture/ShowFacture.vue')
-    // },
+
     {
       path: '/:catchAll(.*)',
       component: () => import('../components/404Page.vue'),

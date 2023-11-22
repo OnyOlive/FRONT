@@ -25,7 +25,7 @@
                     <thead>
                         <tr>
                             <th>Nom</th>
-                            <th>Secteur</th>
+                            <th>Lieu</th>
                             <!-- <th>Actions</th> -->
                         </tr>
                     </thead>

@@ -7,9 +7,9 @@
             </a>
             <ul class="nav nav-pills flex-column mb-sm-auto mb-15 align-items-center align-items-sm-start " id="menu" style="width: 100%" >
                 <li class="nav-item w-100">
-                    <p class="nav-link align-middle px-2 m-0 w-100 text-info" :class="{ 'active-menu-item': isActive('home') }" @click="router.push({name: 'home'})">
-                        <i class="fas fa-home" ></i>
-                        <span class="ms-1 d-none d-sm-inline" > HOME</span>
+                    <p class="nav-link align-middle px-2 m-0 w-100 text-info" :class="{ 'active-menu-item': isActive('show bilan') }" @click="router.push({name: 'show bilan'})">
+                        <i class="fas fa-th-list"></i>
+                        <span class="ms-1 d-none d-sm-inline" > BILANS DES VENTES</span>
                     </p>
                 </li>
                 <li class="nav-item w-100">

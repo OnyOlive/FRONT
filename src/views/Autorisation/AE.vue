@@ -4,7 +4,7 @@
     </button>
     <div class="autorisation">
         <div id="content-to-pdf">
-            <div class="container text-center">
+            <div class="container text-center mt-3">
                     <div class="row">
                         <div class="col-md-5">
                             <ul class="list-unstyled">
@@ -38,7 +38,7 @@
                         <h3  class="fst-italic" style="font-family: 'Times New Roman', Times, serif;" >N° {{ autorisationByNumAE.numeroAE }} - {{getYearDigits()}}/OFT/DG/CV - 61/{{getYearDigits()}}/SVC</h3> 
                     </div>
 
-                    <div class="row px-6 m-lg-5 text-start">
+                    <!-- <div class="row px-6 m-lg-5 text-start">
                         <p>La société <b>{{ data.nomSociete }} </b> (secteur de <b>{{ autorisationByNumAE.secteurSociete }}</b>) 
                             est autorisée à livrer dans le véhicule immatriculé <b>{{ autorisationByNumAE.immatriculation }} </b>à la SITAM
                             <b>{{ autorisationByNumAE.poids }}</b> Kg de tabacs <b>{{ autorisationByNumAE.variete }}</b>,
@@ -48,18 +48,40 @@
                         <p>Ce poids correspond aux listes de colisages N° <b>{{ separation }}</b>  jointes dans le présent document. </p>
                         <p>La présente autorisation est valable pour une durée de <b>{{ autorisationByNumAE.validite }}</b> jours 
                             à compter du départ du véhicule le <b>{{ formateDate(autorisationByNumAE.departVehicule) }}</b> </p>
+                    </div> -->
+
+                    <div class="row m-lg-5 text-start text-right" style="font-family: 'Times New Roman', Times, serif;">
+                        <p><span class="px-4"></span>Le chef de secteur OFMATA <b>MAEVATANANA</b> est autorisé à livrer à la société VOLAMAZAVA, 
+                            <b>SIX CENT CINQUANTE KILOGRAMMES (650KG) </b> de <b>TABAC CORSE RNO </b>en feuilles, 
+                            emballés en provenance de MAEVATANANA à destination d'ANTSIRABE.</p>
+                        <p>Ce poids correspond aux listes de colisage N° ................................................................... jointes au présent 
+                            document.</p>
+                        <p>Conformément à la décision N° 003/OFT/DG-15/21 du 08 Janvier 2021 portant 
+                            réorganisation dela politique de vente de l'OFMATA en son article 5, 
+                            les clients sont encouragés à vérifier la qualité des tabacs dans les 
+                            balles en magasin conformément à l'autorisation d'enlèvement. Une fois
+                            sortie du magasin, la liste de colisage doit dument remplie, et aucune réclamation 
+                            ultérieure ne sera acceptée.
+                        </p>
+                        <p>La présente autorisation est valable pour une période de <b>10 jours</b> : <br>
+                        du <b>13 Novembre 2023</b> jusqu'au <b>22 Novembre 2023</b>.</p>
                     </div>
 
                     <div>
                         <div class=" text-end">
-                            <p class="fw-bold">Date: <span class="text-muted">{{ formateDate(autorisationByNumAE.dateAE) }}</span></p>
+                            <p class="fw-bold">Antananarivo, le <span class="text-muted"><!--{{ formateDate(autorisationByNumAE.dateAE) }} --> 12-10-2323</span></p>
                         </div>
                         <div class="mt-10">
-                            <ul class="text-start">
+                            <ul class="text-start ">
                                 <li class="li list-unstyled"><b>DESTINATAIRES</b></li>
-                                <li style="margin-left: 50px;">Société ....................................</li>
-                                <li style="margin-left: 50px;"> {{ data.nomSociete }}</li>
-                                <li style="margin-left: 50px;">Archive</li>
+                                <li class="fst-italic fs-6" style="margin-left: 50px;">Société VOLAMAZAVA ANTSIRABE</li>
+                                <li class="fst-italic fs-6" style="margin-left: 50px;">Le chef de secteur MAEVATANANA</li>
+                                <li class="fst-italic fs-6" style="margin-left: 50px;">Division comptabilité </li>
+                                <li class="fst-italic fs-6" style="margin-left: 50px;">Division Recouvrement</li>
+                                <li class="fst-italic fs-6" style="margin-left: 50px;">Division commerciale</li>
+                                <li class="fst-italic fs-6" style="margin-left: 50px;">Archives</li>
+                                <li class="fst-italic fs-6" style="margin-left: 50px;">Département PRODUCTION</li>
+                                <li class="fst-italic fs-6" style="margin-left: 50px;">Chef de ZNR</li>
                             </ul>
                         </div>
                     </div>

@@ -34,21 +34,21 @@
                         <h2 class="fw-bold fst-italic" style="font-family: 'Times New Roman', Times, serif;" >
                             Récapitulation de la liste de colisage
                         </h2>
-                        <h3  class="fst-italic" style="font-family: 'Times New Roman', Times, serif;" >N° {{props.numeroLC}} </h3> 
+                        <h3  class="fst-italic" style="font-family: 'Times New Roman', Times, serif;" >N° {{props.numeroLC}} 000123</h3> 
                     </div>
                     <div class="row px-5 mt-3">
                         <div class="col-md-6">
                             <ul class="list-unstyled">
-                                <li ><span class="fw-bold">N° Laissez-passer: </span>{{ colisageByID.numeroLaissezPasser}}</li>
-                                <li ><span class="fw-bold">Variété: </span>{{ colisageByID.varietes?.nomVariete}}</li>
-                                <li ><span class="fw-bold">Secteur:</span> {{ colisageByID.secteur  }}</li>
-                                <li ><span class="fw-bold">Magasin:</span> {{ colisageByID.magasins?.nomMagasin }}</li>
-                                <li ><span class="fw-bold">Emballage:</span> {{ colisageByID.emballage }}</li>
+                                <li ><span class="fw-bold">N° Laissez-passer: </span>{{ colisageByID.numeroLaissezPasser}} 12</li>
+                                <li ><span class="fw-bold">Variété: </span>{{ colisageByID.varietes?.nomVariete}} RNO</li>
+                                <li ><span class="fw-bold">Secteur:</span> {{ colisageByID.secteur  }} Ambilobe</li>
+                                <li ><span class="fw-bold">Magasin:</span> {{ colisageByID.magasins?.nomMagasin }} Ambilobe</li>
+                                <li ><span class="fw-bold">Emballage:</span> {{ colisageByID.emballage }} 2023</li>
                             </ul>
                         </div>
                         <div class="col-md-6">
                             <ul class="list-unstyled">
-                                <li ><span class="fw-bold">Chauffeur: </span>{{ colisageByID.nomChauffeur}}</li>
+                                <li ><span class="fw-bold">Chauffeur: </span>{{ colisageByID.nomChauffeur}} RABE</li>
                                 <li ><span class="fw-bold">N° Camion: </span>{{ colisageByID.numeroCamion }}</li>
                                 <li ><span class="fw-bold">Lieu de départ:</span> {{ colisageByID.lieuDepart }}</li>
                                 <li ><span class="fw-bold">Destination:</span> {{ colisageByID.destination }}</li>
